@@ -27,6 +27,7 @@ Route::post('login',[AuthController::class, 'Authlogin']);
 Route::get('logout',[AuthController::class, 'logout']);
 Route::get('forgot-password',[AuthController::class, 'forgotpassword']);
 Route::post('forgot-password',[AuthController::class, 'Postforgotpassword']);
+Route::get('reset/{token}',[AuthController::class, 'reset']);
 
 
 Route::get('/admin/admin/list', function () {

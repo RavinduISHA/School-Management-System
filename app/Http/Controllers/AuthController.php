@@ -18,7 +18,6 @@ class AuthController extends Controller
     //
     public function login(){
 
-        // dd(Hash::make(12345));
         if(!empty(Auth::check()))
         {
             if(Auth::user()->user_type == 1)
@@ -85,6 +84,18 @@ class AuthController extends Controller
         else
         {
             return redirect()->back()->with('error', "Email not found in the system");
+        }
+    }
+
+    public function reset($remember_token)
+    {
+        $user = User::getToken($remember_token);
+        if(!empty($user))
+        {
+            $data['user'] = $user;
+            return view('auth.reset', $data);
+        }else{
+            abort(404);
         }
     }
 }
