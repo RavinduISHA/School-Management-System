@@ -37,7 +37,7 @@
         </div>
 
         <div class="input-group mb-3">
-            <input type="password" name="cpassword" class="form-control" placeholder="Confirm password" required>
+            <input type="password" name="cpassword" class="form-control" placeholder="Comfirm password" required>
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-envelope"></span>
